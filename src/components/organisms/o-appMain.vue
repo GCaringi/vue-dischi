@@ -1,5 +1,5 @@
 <template>
-  <main class="flex justify-center items-center">
+  <main class="min-h-[calc(100vh-var(--header-height))] flex justify-center items-center bg-[color:var(--clr-bg-secondary)]">
       <appContent/>
   </main>
 </template>
@@ -17,8 +17,5 @@ export default {
 </script>
 
 <style lang = "scss" scoped>
-    main{
-        min-height: calc(100vh - var(--header-height));
-        background-color: var(--clr-bg-secondary);
-    }
+
 </style>

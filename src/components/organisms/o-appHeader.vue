@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class = "bg-[color:var(--clr-primary)] h-[var(--header-height)]">
       <logo/>
   </header>
 </template>
@@ -18,9 +18,5 @@ export default {
 
 <style lang = "scss" scoped>
 
-header{
-    background-color: var(--clr-primary);
-    height: var(--header-height);
-}
 
 </style>
