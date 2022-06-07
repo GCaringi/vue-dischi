@@ -1,20 +1,24 @@
 <template>
-  <main class = "">
-
+  <main class="flex justify-center items-center">
+      <appContent/>
   </main>
 </template>
 
 <script>
 
+import appContent from "./o-appContent.vue"
 
 export default {
-    name: "appMain"
+    name: "appMain",
+    components: {
+        appContent,
+    }
 }
 </script>
 
 <style lang = "scss" scoped>
     main{
-        height: calc(100vh - var(--header-height));
+        height: 100%;
         background-color: var(--clr-bg-secondary);
     }
 </style>
