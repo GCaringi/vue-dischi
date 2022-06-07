@@ -1,9 +1,9 @@
 <template>
-    <div class = "a-card">
-        <img :src= elem.poster  alt="IMG">
-        <h2>{{elem.title}}</h2>
-        <div>{{elem.author}}</div>
-        <small>{{elem.year}}</small>
+    <div class = "a-card h-full flex flex-col items-center bg-[color:var(--clr-primary)] p-4">
+        <img class = "w-full aspect-square" :src= elem.poster  alt= elem.title>
+        <h2 class= "text-white font-bold text-xxl text-center" >{{elem.title}}</h2>
+        <div class = "text-[color:var(--clr-tertiary)]">{{elem.author}}</div>
+        <small class = "text-[color:var(--clr-tertiary)]">{{elem.year}}</small>
     </div>
 </template>
 
@@ -20,18 +20,5 @@ export default {
 </script>
 
 <style lang = "scss" scoped>
-
-img{
-    width: 100%;
-    aspect-ratio: 1;
-}
-
-.a-card{
-    display: flex;
-    flex-direction: column ;
-    align-items: center;
-    background-color: var(--clr-primary);
-    padding: 20px;
-}
 
 </style>
