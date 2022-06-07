@@ -18,7 +18,7 @@ export default {
 
 <style lang = "scss" scoped>
     main{
-        height: 100%;
+        min-height: calc(100vh - var(--header-height));
         background-color: var(--clr-bg-secondary);
     }
 </style>
