@@ -1,5 +1,6 @@
 <template>
-  <div class="loader">
+  <div class="loader flex justify-center items-center absolute inset-0 bg-[color:var(--clr-bg-secondary)]"
+        v-if = !isLoad>
       <loaderItem/>
   </div>
 </template>
@@ -10,19 +11,24 @@ import loaderItem from '../atoms/a-loader.vue'
 
 export default {
     name: "appLoader",
+    data(){
+        return {
+            isLoad: false,
+        }
+    },
+    mounted(){
+        document.onreadystatechange = () => {
+            if (document.readyState == "complete"){
+                this.isLoad = true;
+            }
+        }
+    },
     components: {
         loaderItem,
     }
 }
 </script>
 
-<style>
-    .loader{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        inset: 0;
-        background-color: rgba(255, 0, 0, 0.138) ;
-    }
+<style lang = "scss" scoped>
+
 </style>
