@@ -1,5 +1,5 @@
 <template>
-  <img class = "h-full p-2" src="../../assets/img/spotify-logo.png" alt="Logo App">
+  <img class = "h-full p-2 aspect-square" src="../../assets/img/spotify-logo.png" alt="Logo App">
 </template>
 
 <script>
