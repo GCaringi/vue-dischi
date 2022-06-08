@@ -30,6 +30,12 @@ export default {
         .then((apiData) =>{
             console.log(apiData.data.response)
             this.myData = apiData.data.response;
+            this.myData.forEach(element => {
+                if (!this.sharedData.typeOption.includes(element.genre)){
+                    sharedData.typeOption.push(element.genre)
+                }
+            });
+            console.log(this.sharedData.typeOption);
         })
         .catch(function(error){
             console.log(error)
